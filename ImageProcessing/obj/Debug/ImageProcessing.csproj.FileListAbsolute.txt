@@ -1,0 +1,4 @@
+C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\ImageProcessing\bin\Debug\ImageProcessing.dll
+C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\ImageProcessing\bin\Debug\ImageProcessing.pdb
+C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\ImageProcessing\obj\Debug\ImageProcessing.dll
+C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\ImageProcessing\obj\Debug\ImageProcessing.pdb
