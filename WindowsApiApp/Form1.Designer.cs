@@ -79,12 +79,19 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button47 = new System.Windows.Forms.Button();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button49 = new System.Windows.Forms.Button();
+            this.button50 = new System.Windows.Forms.Button();
+            this.button51 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -651,11 +658,76 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Mixed";
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.button51);
+            this.groupBox7.Controls.Add(this.button50);
+            this.groupBox7.Controls.Add(this.button49);
+            this.groupBox7.Controls.Add(this.button48);
+            this.groupBox7.Controls.Add(this.button47);
+            this.groupBox7.Location = new System.Drawing.Point(735, 12);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(273, 383);
+            this.groupBox7.TabIndex = 52;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "New"; 
+            // 
+            // button47
+            // 
+            this.button47.Location = new System.Drawing.Point(9, 19);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(140, 30);
+            this.button47.TabIndex = 31;
+            this.button47.Text = "Lock Work Station";
+            this.button47.UseVisualStyleBackColor = true;
+            this.button47.Click += new System.EventHandler(this.button47_Click);
+            // 
+            // button48
+            // 
+            this.button48.Location = new System.Drawing.Point(9, 55);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(140, 30);
+            this.button48.TabIndex = 32;
+            this.button48.Text = "Hibernate";
+            this.button48.UseVisualStyleBackColor = true;
+            this.button48.Click += new System.EventHandler(this.button48_Click);
+            // 
+            // button49
+            // 
+            this.button49.Location = new System.Drawing.Point(9, 91);
+            this.button49.Name = "button49";
+            this.button49.Size = new System.Drawing.Size(140, 30);
+            this.button49.TabIndex = 33;
+            this.button49.Text = "Sleep";
+            this.button49.UseVisualStyleBackColor = true;
+            this.button49.Click += new System.EventHandler(this.button49_Click);
+            // 
+            // button50
+            // 
+            this.button50.Location = new System.Drawing.Point(9, 127);
+            this.button50.Name = "button50";
+            this.button50.Size = new System.Drawing.Size(140, 30);
+            this.button50.TabIndex = 34;
+            this.button50.Text = "Shutdown";
+            this.button50.UseVisualStyleBackColor = true;
+            this.button50.Click += new System.EventHandler(this.button50_Click);
+            // 
+            // button51
+            // 
+            this.button51.Location = new System.Drawing.Point(9, 163);
+            this.button51.Name = "button51";
+            this.button51.Size = new System.Drawing.Size(140, 30);
+            this.button51.TabIndex = 35;
+            this.button51.Text = "5+3=?";
+            this.button51.UseVisualStyleBackColor = true;
+            this.button51.Click += new System.EventHandler(this.button51_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 549);
+            this.ClientSize = new System.Drawing.Size(1020, 549);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -671,6 +743,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -731,6 +804,12 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button button47;
+        private System.Windows.Forms.Button button49;
+        private System.Windows.Forms.Button button48;
+        private System.Windows.Forms.Button button50;
+        private System.Windows.Forms.Button button51;
     }
 }
 

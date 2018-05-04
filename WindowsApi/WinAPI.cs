@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
- 
+
 
 namespace WindowsApi
 {
@@ -11,8 +11,11 @@ namespace WindowsApi
         [DllImport("user32.dll")]
         internal static extern IntPtr GetDesktopWindow();
 
-        [DllImport("user32.dll")]
+        [DllImport("user32.dll", SetLastError = true)]
         internal static extern IntPtr FindWindowEx(IntPtr parentHandle, int childAfter, string className, int windowTitle);
+
+        [DllImport("user32.dll")]
+        internal static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, string windowTitle);
 
         [DllImport("user32.dll")]
         internal static extern bool GetWindowRect(IntPtr hWnd, out Structs.Rect lpRect);
@@ -79,5 +82,24 @@ namespace WindowsApi
 
         [DllImport("user32.dll", SetLastError = true)]
         internal static extern uint SendInput(uint nInputs, ref Structs.INPUT pInputs, int cbSize);
+
+        [DllImport("kernel32.dll")]
+        private static extern IntPtr GetConsoleWindow();
+
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        internal static extern int SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam);
+
+        //lock station
+        [DllImport("user32.dll")]
+        internal static extern bool LockWorkStation();
+
+        //windows logout
+        [DllImport("user32.dll")]
+        internal static extern bool ExitWindowsEx(uint uFlags, uint dwReason);
+
+        //hibernate
+        [DllImport("PowrProf.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
+        internal static extern bool SetSuspendState(bool hiberate, bool forceCritical, bool disableWakeEvent);
     }
 }

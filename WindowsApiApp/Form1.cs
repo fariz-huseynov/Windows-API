@@ -404,7 +404,7 @@ namespace WindowsApiApp
 
         private void button2_Click(object sender, EventArgs e) {
             // retrieve Notepad main window handle
-            IntPtr hWnd = FindWindow("Notepad", "viev.txt - Notepad");
+            IntPtr hWnd = FindWindow("Notepad", "Untitled - Notepad");
             if (!hWnd.Equals(IntPtr.Zero)) {
                 // SW_SHOWMAXIMIZED to maximize the window
                 // SW_SHOWMINIMIZED to minimize the window
@@ -529,7 +529,7 @@ namespace WindowsApiApp
         }
 
         private void button7_Click(object sender, EventArgs e) {
-            Note[] melody = new Note[] { 
+            Note[] melody = new Note[] {
             new Note(Note.A,0, 500),
             new Note(Note.B,0, 500),
             new Note(Note.C,0, 500),
@@ -649,20 +649,23 @@ namespace WindowsApiApp
             if (!hWnd.Equals(IntPtr.Zero)) {
                 SendMessage(hWnd, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
             }
-          
+
         }
 
 
 
         [DllImport("user32.dll", SetLastError = true)]
         static extern int MessageBoxTimeout(IntPtr hwnd, String text, String title, uint type, Int16 wLanguageId, Int32 milliseconds);
- 
-        private void button13_Click(object sender, EventArgs e) { 
+
+        private void button13_Click(object sender, EventArgs e) {
             MessageBoxTimeout(IntPtr.Zero, "text", "title", 1, 1, 0);
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-
+            IntPtr hWnd = Window.Get("windows api");
+            if (!hWnd.Equals(IntPtr.Zero)) {
+                MoveWindowToMonitor(hWnd, 1);
+            }
         }
 
         private void button14_Click(object sender, EventArgs e) {
@@ -673,7 +676,7 @@ namespace WindowsApiApp
         }
 
         private void button15_Click(object sender, EventArgs e) {
-            WindowsApi.Draw.String("Write to Desktop. Date: "+DateTime.Now.ToShortDateString(), 200, 200, Color.White, 20);
+            WindowsApi.Draw.String("Write to Desktop. Date: " + DateTime.Now.ToShortDateString(), 200, 200, Color.White, 20);
         }
 
         private void button16_Click(object sender, EventArgs e) {
@@ -764,7 +767,7 @@ namespace WindowsApiApp
                 System.Threading.Thread.Sleep(10);
             }
 
-        //    Application.Run();
+            //    Application.Run();
         }
 
         private void button24_Click(object sender, EventArgs e) {
@@ -797,8 +800,8 @@ namespace WindowsApiApp
             }
 
             Window.Close(hWnd);
-           // System.Threading.Thread.Sleep(100);
-          //  Application.Run();
+            // System.Threading.Thread.Sleep(100);
+            //  Application.Run();
         }
 
         private void button26_Click(object sender, EventArgs e) {
@@ -821,7 +824,7 @@ namespace WindowsApiApp
             Window.Close(hWnd);
             System.Threading.Thread.Sleep(100);
             screenshot.Dispose();
-          //  Application.Run();
+            //  Application.Run();
         }
 
         private void button27_Click(object sender, EventArgs e) {
@@ -860,7 +863,7 @@ namespace WindowsApiApp
             mask.TransparencyKey = Color.White;
             System.Threading.Thread.Sleep(100);
             Window.Close(hWnd);
-         //   Application.Run();
+            //   Application.Run();
         }
 
         private void button30_Click(object sender, EventArgs e) {
@@ -931,5 +934,44 @@ namespace WindowsApiApp
         private void button46_Click(object sender, EventArgs e) {
             DesktopArt.Run();
         }
+
+
+
+        private void button47_Click(object sender, EventArgs e) {
+            Window.LockWorkStation();
+        }
+
+        private void button48_Click(object sender, EventArgs e) {
+            Window.Hibernate();
+        }
+
+        private void button49_Click(object sender, EventArgs e) {
+            Window.Sleep();
+        }
+
+        private void button50_Click(object sender, EventArgs e) {
+            Process.Start("shutdown", "/s /t 0");
+            // starts the shutdown application 
+            // the argument /s is to shut down the computer
+            // the argument /t 0 is to tell the process that 
+            // the specified operation needs to be completed 
+            // after 0 seconds
+            //https://www.codeproject.com/Tips/480049/Shut-Down-Restart-Log-off-Lock-Hibernate-or-Sleep
+        }
+
+        private void button51_Click(object sender, EventArgs e) {
+            try {
+                var res = Window.Get("Calculator");
+                Window.SetFocused(res);
+                //  SendKeys.SendWait("^{a}{BACKSPACE}"); //select all and delete
+                SendKeys.SendWait("{C}");
+                SendKeys.SendWait("5{+}8");
+                SendKeys.SendWait("{ENTER}");// or  SendKeys.SendWait("{=}");
+
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
+         
     }
 }

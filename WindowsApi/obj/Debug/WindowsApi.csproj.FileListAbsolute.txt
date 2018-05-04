@@ -1,4 +1,0 @@
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApi\bin\Debug\WindowsApi.dll
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApi\bin\Debug\WindowsApi.pdb
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApi\obj\Debug\WindowsApi.dll
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApi\obj\Debug\WindowsApi.pdb

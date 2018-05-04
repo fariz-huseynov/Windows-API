@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Text;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 
 namespace WindowsApi
 {
@@ -16,6 +16,15 @@ namespace WindowsApi
             IntPtr ıntPtr = WinAPI.FindWindow(null, windowTitle);
             if (ıntPtr == IntPtr.Zero) {
                 throw new Exception("Window not found.");
+            }
+            return ıntPtr;
+        }
+
+        public static IntPtr GetControlOnWindow(IntPtr windowInt, string controlName, string controlTitle) {
+            IntPtr ıntPtr = WinAPI.FindWindowEx(windowInt, IntPtr.Zero, controlName, controlTitle);
+
+            if (ıntPtr == IntPtr.Zero) {
+                throw new Exception("Control not found.");
             }
             return ıntPtr;
         }
@@ -168,6 +177,28 @@ namespace WindowsApi
             int y = position.Y;
             return new Point(x - rect.X, y - rect.Y);
         }
+
+
+
+        public static void LockWorkStation() {
+            WinAPI.LockWorkStation();
+        }
+
+        public static void LogOff() {
+            WinAPI.ExitWindowsEx(0, 0);
+        }
+
+        public static void Hibernate() {
+            WinAPI.SetSuspendState(true, true, true);
+        }
+        public static void Sleep() {
+            WinAPI.SetSuspendState(false, true, true);
+        }
+
+        public static void SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam) {
+            WinAPI.SendMessage(hWnd, wMsg, wParam, lParam);
+        }
+
     }
 
 }

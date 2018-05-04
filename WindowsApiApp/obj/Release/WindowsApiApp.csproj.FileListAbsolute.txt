@@ -1,8 +1,0 @@
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApiApp\bin\Release\WindowsApiApp.exe.config
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApiApp\obj\Release\WindowsApiApp.Form1.resources
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApiApp\obj\Release\WindowsApiApp.Properties.Resources.resources
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApiApp\obj\Release\WindowsApiApp.csproj.GenerateResource.Cache
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApiApp\bin\Release\WindowsApiApp.exe
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApiApp\bin\Release\WindowsApiApp.pdb
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApiApp\obj\Release\WindowsApiApp.exe
-C:\Users\fariz.huseynov\Documents\Visual Studio 2015\Projects\WindowsApiApp\WindowsApiApp\obj\Release\WindowsApiApp.pdb
