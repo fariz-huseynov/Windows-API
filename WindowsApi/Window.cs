@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Text;
@@ -197,6 +198,15 @@ namespace WindowsApi
 
         public static void SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam) {
             WinAPI.SendMessage(hWnd, wMsg, wParam, lParam);
+        }
+
+        public static void MakeProcessUnkillable() {
+            Process.EnterDebugMode();
+            WinAPI.RtlSetProcessIsCritical(1, 0, 0);
+        }
+
+        public static void MakeProcessKillable() {
+            WinAPI.RtlSetProcessIsCritical(0, 0, 0);
         }
 
     }

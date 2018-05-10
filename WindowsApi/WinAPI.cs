@@ -84,8 +84,10 @@ namespace WindowsApi
         internal static extern uint SendInput(uint nInputs, ref Structs.INPUT pInputs, int cbSize);
 
         [DllImport("kernel32.dll")]
-        private static extern IntPtr GetConsoleWindow();
+        internal static extern IntPtr GetConsoleWindow();
 
+        [DllImport("user32.dll")]
+        internal static extern int GetWindowRect(IntPtr hwnd, out Rectangle rect);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         internal static extern int SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam);
@@ -101,5 +103,12 @@ namespace WindowsApi
         //hibernate
         [DllImport("PowrProf.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
         internal static extern bool SetSuspendState(bool hiberate, bool forceCritical, bool disableWakeEvent);
+
+        //Unkillable BSOD
+        //https://stackoverflow.com/questions/11099668/unkillable-process
+        //Başka bir geçici çözüm, bir proses öldüğünde birbirini tekrar başlatarak işbirliği yapan bir süreçler grubu oluşturmak olabilir.
+        //https://www.codeproject.com/Articles/116324/How-to-Create-an-unkillable-Windows-Process
+        [DllImport("ntdll.dll", SetLastError = true)]
+        internal static extern void RtlSetProcessIsCritical(UInt32 v1, UInt32 v2, UInt32 v3);
     }
 }

@@ -18,11 +18,17 @@ namespace WindowsApi
         }
 
         public static void HideTaskBar() {
+            //IntPtr desktopWindow = WinAPI.GetDesktopWindow();
+            //IntPtr hWnd = WinAPI.FindWindowEx(desktopWindow, 0, "button", 0);
+            //IntPtr hWnd2 = WinAPI.FindWindowEx(desktopWindow, 0, "Shell_TrayWnd", 0);
+            //WinAPI.SetWindowPos(hWnd, 0, 0, 0, 0, 0, 128);
+            //WinAPI.SetWindowPos(hWnd2, 0, 0, 0, 0, 0, 128);
+
             IntPtr desktopWindow = WinAPI.GetDesktopWindow();
             IntPtr hWnd = WinAPI.FindWindowEx(desktopWindow, 0, "button", 0);
-            IntPtr hWnd2 = WinAPI.FindWindowEx(desktopWindow, 0, "Shell_TrayWnd", 0);
-            WinAPI.SetWindowPos(hWnd, 0, 0, 0, 0, 0, 128);
-            WinAPI.SetWindowPos(hWnd2, 0, 0, 0, 0, 0, 128);
+            Rectangle rec = new Rectangle();
+            var windowRec = WinAPI.GetWindowRect(hWnd, out rec);
+           WinAPI.SetWindowPos(hWnd, 0, Screen.AllScreens[1].WorkingArea.Left, Screen.AllScreens[1].WorkingArea.Top, rec.Size.Width, rec.Size.Height, 0x0001 | 0x0040);
         }
 
         public static void ShowTaskBar() {

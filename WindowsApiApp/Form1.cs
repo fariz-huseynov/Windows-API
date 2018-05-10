@@ -972,6 +972,17 @@ namespace WindowsApiApp
                 MessageBox.Show(ex.Message);
             }
         }
-         
+      
+        private void button52_Click(object sender, EventArgs e) {
+            /*
+             After you call MakeProcessUnkillable, killing the process will result in an immediate BSOD. 
+             */
+        /*    Process.EnterDebugMode();
+            Window.MakeProcessUnkillable();*/
+        }
+
+        private void button53_Click(object sender, EventArgs e) {
+          /*  Window.MakeProcessKillable();*/
+        }
     }
 }

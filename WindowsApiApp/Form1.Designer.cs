@@ -80,11 +80,13 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button48 = new System.Windows.Forms.Button();
-            this.button49 = new System.Windows.Forms.Button();
-            this.button50 = new System.Windows.Forms.Button();
             this.button51 = new System.Windows.Forms.Button();
+            this.button50 = new System.Windows.Forms.Button();
+            this.button49 = new System.Windows.Forms.Button();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button47 = new System.Windows.Forms.Button();
+            this.button52 = new System.Windows.Forms.Button();
+            this.button53 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -660,6 +662,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.button53);
+            this.groupBox7.Controls.Add(this.button52);
             this.groupBox7.Controls.Add(this.button51);
             this.groupBox7.Controls.Add(this.button50);
             this.groupBox7.Controls.Add(this.button49);
@@ -670,37 +674,17 @@
             this.groupBox7.Size = new System.Drawing.Size(273, 383);
             this.groupBox7.TabIndex = 52;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "New"; 
+            this.groupBox7.Text = "New";
             // 
-            // button47
+            // button51
             // 
-            this.button47.Location = new System.Drawing.Point(9, 19);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(140, 30);
-            this.button47.TabIndex = 31;
-            this.button47.Text = "Lock Work Station";
-            this.button47.UseVisualStyleBackColor = true;
-            this.button47.Click += new System.EventHandler(this.button47_Click);
-            // 
-            // button48
-            // 
-            this.button48.Location = new System.Drawing.Point(9, 55);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(140, 30);
-            this.button48.TabIndex = 32;
-            this.button48.Text = "Hibernate";
-            this.button48.UseVisualStyleBackColor = true;
-            this.button48.Click += new System.EventHandler(this.button48_Click);
-            // 
-            // button49
-            // 
-            this.button49.Location = new System.Drawing.Point(9, 91);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(140, 30);
-            this.button49.TabIndex = 33;
-            this.button49.Text = "Sleep";
-            this.button49.UseVisualStyleBackColor = true;
-            this.button49.Click += new System.EventHandler(this.button49_Click);
+            this.button51.Location = new System.Drawing.Point(9, 163);
+            this.button51.Name = "button51";
+            this.button51.Size = new System.Drawing.Size(140, 30);
+            this.button51.TabIndex = 35;
+            this.button51.Text = "5+3=?";
+            this.button51.UseVisualStyleBackColor = true;
+            this.button51.Click += new System.EventHandler(this.button51_Click);
             // 
             // button50
             // 
@@ -712,15 +696,55 @@
             this.button50.UseVisualStyleBackColor = true;
             this.button50.Click += new System.EventHandler(this.button50_Click);
             // 
-            // button51
+            // button49
             // 
-            this.button51.Location = new System.Drawing.Point(9, 163);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(140, 30);
-            this.button51.TabIndex = 35;
-            this.button51.Text = "5+3=?";
-            this.button51.UseVisualStyleBackColor = true;
-            this.button51.Click += new System.EventHandler(this.button51_Click);
+            this.button49.Location = new System.Drawing.Point(9, 91);
+            this.button49.Name = "button49";
+            this.button49.Size = new System.Drawing.Size(140, 30);
+            this.button49.TabIndex = 33;
+            this.button49.Text = "Sleep";
+            this.button49.UseVisualStyleBackColor = true;
+            this.button49.Click += new System.EventHandler(this.button49_Click);
+            // 
+            // button48
+            // 
+            this.button48.Location = new System.Drawing.Point(9, 55);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(140, 30);
+            this.button48.TabIndex = 32;
+            this.button48.Text = "Hibernate";
+            this.button48.UseVisualStyleBackColor = true;
+            this.button48.Click += new System.EventHandler(this.button48_Click);
+            // 
+            // button47
+            // 
+            this.button47.Location = new System.Drawing.Point(9, 19);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(140, 30);
+            this.button47.TabIndex = 31;
+            this.button47.Text = "Lock Work Station";
+            this.button47.UseVisualStyleBackColor = true;
+            this.button47.Click += new System.EventHandler(this.button47_Click);
+            // 
+            // button52
+            // 
+            this.button52.Location = new System.Drawing.Point(9, 199);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(140, 30);
+            this.button52.TabIndex = 36;
+            this.button52.Text = "Make Proccess Unkillable";
+            this.button52.UseVisualStyleBackColor = true;
+            this.button52.Click += new System.EventHandler(this.button52_Click);
+            // 
+            // button53
+            // 
+            this.button53.Location = new System.Drawing.Point(9, 235);
+            this.button53.Name = "button53";
+            this.button53.Size = new System.Drawing.Size(140, 30);
+            this.button53.TabIndex = 37;
+            this.button53.Text = "Make Proccess Killable";
+            this.button53.UseVisualStyleBackColor = true;
+            this.button53.Click += new System.EventHandler(this.button53_Click);
             // 
             // Form1
             // 
@@ -810,6 +834,8 @@
         private System.Windows.Forms.Button button48;
         private System.Windows.Forms.Button button50;
         private System.Windows.Forms.Button button51;
+        private System.Windows.Forms.Button button53;
+        private System.Windows.Forms.Button button52;
     }
 }
 
