@@ -110,5 +110,9 @@ namespace WindowsApi
         //https://www.codeproject.com/Articles/116324/How-to-Create-an-unkillable-Windows-Process
         [DllImport("ntdll.dll", SetLastError = true)]
         internal static extern void RtlSetProcessIsCritical(UInt32 v1, UInt32 v2, UInt32 v3);
+
+        //refresh screen
+        [DllImport("Shell32.dll")]
+        internal static extern int SHChangeNotify(int eventId, int flags, IntPtr item1, IntPtr item2);
     }
 }

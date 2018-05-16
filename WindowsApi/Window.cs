@@ -209,6 +209,9 @@ namespace WindowsApi
             WinAPI.RtlSetProcessIsCritical(0, 0, 0);
         }
 
+        public static void RefreshScreen() {
+          WinAPI.SHChangeNotify(0x8000000, 0x1000, IntPtr.Zero, IntPtr.Zero);
+        }
     }
 
 }

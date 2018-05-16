@@ -80,13 +80,14 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button53 = new System.Windows.Forms.Button();
+            this.button52 = new System.Windows.Forms.Button();
             this.button51 = new System.Windows.Forms.Button();
             this.button50 = new System.Windows.Forms.Button();
             this.button49 = new System.Windows.Forms.Button();
             this.button48 = new System.Windows.Forms.Button();
             this.button47 = new System.Windows.Forms.Button();
-            this.button52 = new System.Windows.Forms.Button();
-            this.button53 = new System.Windows.Forms.Button();
+            this.button54 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -662,6 +663,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.button54);
             this.groupBox7.Controls.Add(this.button53);
             this.groupBox7.Controls.Add(this.button52);
             this.groupBox7.Controls.Add(this.button51);
@@ -675,6 +677,26 @@
             this.groupBox7.TabIndex = 52;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "New";
+            // 
+            // button53
+            // 
+            this.button53.Location = new System.Drawing.Point(9, 235);
+            this.button53.Name = "button53";
+            this.button53.Size = new System.Drawing.Size(140, 30);
+            this.button53.TabIndex = 37;
+            this.button53.Text = "Make Proccess Killable";
+            this.button53.UseVisualStyleBackColor = true;
+            this.button53.Click += new System.EventHandler(this.button53_Click);
+            // 
+            // button52
+            // 
+            this.button52.Location = new System.Drawing.Point(9, 199);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(140, 30);
+            this.button52.TabIndex = 36;
+            this.button52.Text = "Make Proccess Unkillable";
+            this.button52.UseVisualStyleBackColor = true;
+            this.button52.Click += new System.EventHandler(this.button52_Click);
             // 
             // button51
             // 
@@ -726,25 +748,15 @@
             this.button47.UseVisualStyleBackColor = true;
             this.button47.Click += new System.EventHandler(this.button47_Click);
             // 
-            // button52
+            // button54
             // 
-            this.button52.Location = new System.Drawing.Point(9, 199);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(140, 30);
-            this.button52.TabIndex = 36;
-            this.button52.Text = "Make Proccess Unkillable";
-            this.button52.UseVisualStyleBackColor = true;
-            this.button52.Click += new System.EventHandler(this.button52_Click);
-            // 
-            // button53
-            // 
-            this.button53.Location = new System.Drawing.Point(9, 235);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(140, 30);
-            this.button53.TabIndex = 37;
-            this.button53.Text = "Make Proccess Killable";
-            this.button53.UseVisualStyleBackColor = true;
-            this.button53.Click += new System.EventHandler(this.button53_Click);
+            this.button54.Location = new System.Drawing.Point(9, 271);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(140, 30);
+            this.button54.TabIndex = 38;
+            this.button54.Text = "Refresh Screen";
+            this.button54.UseVisualStyleBackColor = true;
+            this.button54.Click += new System.EventHandler(this.button54_Click);
             // 
             // Form1
             // 
@@ -836,6 +848,7 @@
         private System.Windows.Forms.Button button51;
         private System.Windows.Forms.Button button53;
         private System.Windows.Forms.Button button52;
+        private System.Windows.Forms.Button button54;
     }
 }
 

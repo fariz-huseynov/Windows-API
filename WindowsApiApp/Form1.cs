@@ -984,5 +984,9 @@ namespace WindowsApiApp
         private void button53_Click(object sender, EventArgs e) {
           /*  Window.MakeProcessKillable();*/
         }
+
+        private void button54_Click(object sender, EventArgs e) {
+            Window.RefreshScreen();
+        }
     }
 }
